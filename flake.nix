@@ -18,6 +18,13 @@
       packages = rec {
         apron = pkgs.apron;
         elina = pkgs.elina;
+        numerical-analysis-libraries = pkgs.buildEnv {
+          name = "numerical-analysis-libraries";
+          paths = [
+            apron
+            elina
+          ];
+        };
       };
     });
 }
